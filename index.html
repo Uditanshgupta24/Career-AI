@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career AI | Tech Career Readiness & Intelligence Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Google-Style Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-logo-symbol">⚡</div>
+        <span>Career AI</span>
+        <span class="brand-ai-chip">INTELLIGENCE</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Eligibility Evaluator</a></li>
+        <li><a href="companies.html">Company Directory</a></li>
+        <li><a href="dsa-tracker.html">DSA Tracker</a></li>
+        <li><a href="interview-guide.html">Interview Guide</a></li>
+        <li><a href="#evaluatorSection" class="nav-cta">Check Readiness</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-pill-badge">
+      <span class="google-dots">
+        <span class="dot blue"></span>
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+      </span>
+      <span>AI-Powered Tech Hiring Benchmarks & Roadmaps</span>
+    </div>
+
+    <h1 class="hero-title">
+      Measure Your Readiness for <span class="gradient-text">Any Tech Role & Company</span>
+    </h1>
+    <p class="hero-subtitle">
+      Evaluate your CV, DSA problems, GitHub, LinkedIn, and LeetCode stats against real hiring bars for Google, Microsoft, Meta, Amazon, TCS, Infosys, and custom tech firms.
+    </p>
+
+    <div class="hero-stats-row">
+      <div class="stat-item">
+        <h3>10+</h3>
+        <p>Top Tier Companies</p>
+      </div>
+      <div class="stat-item">
+        <h3>Flexible</h3>
+        <p>Any Job Role</p>
+      </div>
+      <div class="stat-item">
+        <h3>₹20-80L+</h3>
+        <p>Live Salary Insights</p>
+      </div>
+      <div class="stat-item">
+        <h3>100%</h3>
+        <p>Tailored 12-Wk Roadmap</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Company Picker Section -->
+  <section class="companies-picker-section">
+    <div class="section-header">
+      <h2>Select Your Target Company</h2>
+      <p>Choose from top product & service leaders or enter any custom company below.</p>
+    </div>
+
+    <div class="company-cards-grid">
+      <div class="picker-card selected" onclick="selectCompanyCard('Google')">
+        <div class="company-logo-avatar avatar-google">G</div>
+        <h4>Google</h4>
+        <div class="picker-tag">Tier 1 Product</div>
+        <div class="picker-dsa-badge">Bar: 400+ DSA</div>
+      </div>
+
+      <div class="picker-card" onclick="selectCompanyCard('Microsoft')">
+        <div class="company-logo-avatar avatar-microsoft">M</div>
+        <h4>Microsoft</h4>
+        <div class="picker-tag">Tier 1 Product</div>
+        <div class="picker-dsa-badge">Bar: 350+ DSA</div>
+      </div>
+
+      <div class="picker-card" onclick="selectCompanyCard('Amazon')">
+        <div class="company-logo-avatar avatar-amazon">A</div>
+        <h4>Amazon</h4>
+        <div class="picker-tag">Tier 1 Product</div>
+        <div class="picker-dsa-badge">Bar: 350+ DSA</div>
+      </div>
+
+      <div class="picker-card" onclick="selectCompanyCard('Meta')">
+        <div class="company-logo-avatar avatar-meta">M</div>
+        <h4>Meta</h4>
+        <div class="picker-tag">Tier 1 Product</div>
+        <div class="picker-dsa-badge">Bar: 400+ DSA</div>
+      </div>
+
+      <div class="picker-card" onclick="selectCompanyCard('Apple')">
+        <div class="company-logo-avatar avatar-apple">🍎</div>
+        <h4>Apple</h4>
+        <div class="picker-tag">Tier 1 Product</div>
+        <div class="picker-dsa-badge">Bar: 320+ DSA</div>
+      </div>
+
+      <div class="picker-card" onclick="selectCompanyCard('Uber')">
+        <div class="company-logo-avatar avatar-uber">U</div>
+        <h4>Uber</h4>
+        <div class="picker-tag">High Scale Product</div>
+        <div class="picker-dsa-badge">Bar: 380+ DSA</div>
+      </div>
+
+      <div class="picker-card" onclick="selectCompanyCard('Infosys')">
+        <div class="company-logo-avatar avatar-infosys">I</div>
+        <h4>Infosys</h4>
+        <div class="picker-tag">Digital / Specialist</div>
+        <div class="picker-dsa-badge">Bar: 100+ DSA</div>
+      </div>
+
+      <div class="picker-card" onclick="selectCompanyCard('TCS')">
+        <div class="company-logo-avatar avatar-tcs">T</div>
+        <h4>TCS</h4>
+        <div class="picker-tag">Prime / Digital</div>
+        <div class="picker-dsa-badge">Bar: 90+ DSA</div>
+      </div>
+
+      <div class="picker-card" onclick="selectCompanyCard('Wipro')">
+        <div class="company-logo-avatar avatar-wipro">W</div>
+        <h4>Wipro</h4>
+        <div class="picker-tag">Turbo / Elite</div>
+        <div class="picker-dsa-badge">Bar: 80+ DSA</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Evaluator Form Section -->
+  <section class="evaluator-section" id="evaluatorSection">
+    <div class="main-card">
+      <!-- 1-Click Sample Profiles Bar -->
+      <div class="sample-profiles-bar">
+        <span>⚡ <strong>Quick Test with Sample Profiles:</strong></span>
+        <div class="sample-btns">
+          <button type="button" class="sample-btn" onclick="loadSampleProfile('google_sde')">🎯 Google SDE</button>
+          <button type="button" class="sample-btn" onclick="loadSampleProfile('meta_frontend')">⚛️ Meta Frontend</button>
+          <button type="button" class="sample-btn" onclick="loadSampleProfile('amazon_backend')">🛡️ Amazon Backend</button>
+          <button type="button" class="sample-btn" onclick="loadSampleProfile('tcs_fresher')">🚀 TCS Digital</button>
+          <button type="button" class="sample-btn" onclick="clearForm()">↺ Reset</button>
+        </div>
+      </div>
+
+      <form id="evaluationForm" onsubmit="handleEvaluate(event)">
+        <!-- Company Selection -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="company">Target Company <span class="req">*</span></label>
+            <select id="company" required onchange="onCompanySelectDropdown()">
+              <option value="Google">Google (Tier 1 Product)</option>
+              <option value="Microsoft">Microsoft (Tier 1 Product)</option>
+              <option value="Amazon">Amazon (Tier 1 Product)</option>
+              <option value="Meta">Meta (Tier 1 Product)</option>
+              <option value="Apple">Apple (Tier 1 Product)</option>
+              <option value="Uber">Uber (High Scale Product)</option>
+              <option value="Infosys">Infosys (Specialist / DSE / SE)</option>
+              <option value="TCS">TCS (Prime / Digital / Ninja)</option>
+              <option value="Wipro">Wipro (Turbo / Elite)</option>
+              <option value="custom">✏️ Enter Custom Company...</option>
+            </select>
+          </div>
+
+          <div class="form-group" id="customCompanyGroup" style="display:none;">
+            <label for="customCompany">Custom Company Name <span class="req">*</span></label>
+            <input type="text" id="customCompany" placeholder="e.g. Netflix, Stripe, Flipkart, Zomato">
+          </div>
+
+          <div class="form-group">
+            <label>Experience Level</label>
+            <div class="exp-segmented-bar">
+              <button type="button" class="exp-tab active" onclick="setExpLevel('fresher', this)">Student / Fresher</button>
+              <button type="button" class="exp-tab" onclick="setExpLevel('mid', this)">1 - 3 Years</button>
+              <button type="button" class="exp-tab" onclick="setExpLevel('senior', this)">3 - 5+ Years</button>
+            </div>
+            <input type="hidden" id="experienceLevel" value="fresher">
+          </div>
+        </div>
+
+        <!-- JOB ROLE FREEDOM: Interactive Role Chips + Custom Input -->
+        <div class="form-group">
+          <label>Target Job Role <span class="req">*</span></label>
+          <div class="role-chips-container">
+            <button type="button" class="role-chip active" onclick="setRole('Software Engineer (SDE)', this)">Software Engineer (SDE)</button>
+            <button type="button" class="role-chip" onclick="setRole('Frontend Engineer / React Developer', this)">Frontend Engineer</button>
+            <button type="button" class="role-chip" onclick="setRole('Backend Engineer', this)">Backend Engineer</button>
+            <button type="button" class="role-chip" onclick="setRole('Full Stack Developer', this)">Full Stack Developer</button>
+            <button type="button" class="role-chip" onclick="setRole('Data Scientist / AI & ML Engineer', this)">Data Scientist / AI</button>
+            <button type="button" class="role-chip" onclick="setRole('DevOps / Cloud / SRE', this)">DevOps / Cloud</button>
+            <button type="button" class="role-chip" onclick="setRole('custom', this)">✏️ Other / Custom Role</button>
+          </div>
+          <input type="text" id="targetRole" value="Software Engineer (SDE)" required placeholder="Or type any specific role (e.g. Mobile Developer, Security Engineer, NLP Researcher)...">
+        </div>
+
+        <!-- DSA Questions Solved with Interactive Slider + Number Box -->
+        <div class="form-group">
+          <label for="dsaSlider">Number of DSA Questions Solved <span class="req">*</span></label>
+          <div class="dsa-combo">
+            <input type="range" id="dsaSlider" class="dsa-slider" min="0" max="600" value="180" oninput="syncDsaFromSlider(this.value)">
+            <div class="dsa-number-box">
+              <input type="number" id="dsaSolved" min="0" max="2500" value="180" oninput="syncDsaFromInput(this.value)" required>
+              <span class="dsa-unit">probs</span>
+            </div>
+          </div>
+          <div class="dsa-bar-status" id="dsaBarStatus">Target bar for Google: 400+ problems</div>
+        </div>
+
+        <!-- Profiles: GitHub, LinkedIn, LeetCode, Portfolio -->
+        <div class="form-row four-col">
+          <div class="form-group">
+            <label for="githubUrl">GitHub Profile URL</label>
+            <input type="url" id="githubUrl" placeholder="https://github.com/username">
+          </div>
+
+          <div class="form-group">
+            <label for="linkedinUrl">LinkedIn Profile URL</label>
+            <input type="url" id="linkedinUrl" placeholder="https://linkedin.com/in/username">
+          </div>
+
+          <div class="form-group">
+            <label for="leetcodeUrl">LeetCode / GFG Profile</label>
+            <input type="url" id="leetcodeUrl" placeholder="https://leetcode.com/username">
+          </div>
+
+          <div class="form-group">
+            <label for="portfolioUrl">Portfolio Website</label>
+            <input type="url" id="portfolioUrl" placeholder="https://yourportfolio.dev">
+          </div>
+        </div>
+
+        <!-- CV / Resume Section with Tab Switcher -->
+        <div class="cv-section">
+          <label>Resume / CV Data <span class="req">*</span></label>
+          <div class="cv-tabs">
+            <button type="button" class="tab-btn active" id="tabPdfBtn" onclick="switchCvTab('pdf')">📄 Upload PDF Resume</button>
+            <button type="button" class="tab-btn" id="tabTextBtn" onclick="switchCvTab('text')">✍️ Paste Resume Text</button>
+          </div>
+
+          <!-- PDF Upload Dropzone -->
+          <div id="pdfUploadContainer" class="tab-content active">
+            <div class="file-dropzone" id="dropzone" onclick="document.getElementById('cvFile').click()">
+              <input type="file" id="cvFile" accept=".pdf,.docx,.txt" style="display:none" onchange="handleFileSelected(event)">
+              <div class="dropzone-icon">📁</div>
+              <div class="dropzone-text" id="dropzoneText">
+                <strong>Click to upload</strong> or drag and drop your CV PDF here
+              </div>
+              <div class="dropzone-sub">Supported formats: PDF, DOCX, TXT</div>
+            </div>
+          </div>
+
+          <!-- Direct Resume Text Box -->
+          <div id="textUploadContainer" class="tab-content">
+            <textarea id="cvText" rows="6" placeholder="Paste your resume content, technical skills, projects, and work experience here..."></textarea>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" id="submitBtn" class="btn-primary-google">
+          <span id="btnText">Evaluate Readiness & Generate Roadmap</span>
+          <span id="btnSpinner" class="spinner" style="display: none;"></span>
+        </button>
+      </form>
+    </div>
+
+    <!-- Results Container (Appears after submission) -->
+    <div id="resultContainer" class="result-container" style="display: none;"></div>
+  </section>
+
+  <!-- Google-Style Footer -->
+  <footer class="google-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="nav-brand">
+          <div class="brand-logo-symbol">⚡</div>
+          <span>Career AI</span>
+        </div>
+        <p>AI-driven career benchmarking and intelligent interview roadmap generation for ambitious software engineers.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Eligibility Evaluator</a></li>
+          <li><a href="companies.html">Company Directory</a></li>
+          <li><a href="dsa-tracker.html">DSA Practice Tracker</a></li>
+          <li><a href="interview-guide.html">Interview Master Guide</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Target Companies</h4>
+        <ul>
+          <li><a href="companies.html#google">Google</a></li>
+          <li><a href="companies.html#microsoft">Microsoft</a></li>
+          <li><a href="companies.html#amazon">Amazon</a></li>
+          <li><a href="companies.html#meta">Meta</a></li>
+          <li><a href="companies.html#tcs">TCS Prime</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="interview-guide.html#star">Google STAR Method</a></li>
+          <li><a href="interview-guide.html#ats">ATS Resume Checklist</a></li>
+          <li><a href="interview-guide.html#system-design">System Design Primer</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Career AI. Crafted with Google Material Design principles.</span>
+      <span>Empowering Software Engineers Globally</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

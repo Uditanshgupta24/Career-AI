@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Directory & Hiring Bars | Career AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-logo-symbol">⚡</div>
+        <span>Career AI</span>
+        <span class="brand-ai-chip">INTELLIGENCE</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Eligibility Evaluator</a></li>
+        <li><a href="companies.html" class="active">Company Directory</a></li>
+        <li><a href="dsa-tracker.html">DSA Tracker</a></li>
+        <li><a href="interview-guide.html">Interview Guide</a></li>
+        <li><a href="index.html#evaluatorSection" class="nav-cta">Check Readiness</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="hero" style="padding-bottom: 20px;">
+    <div class="hero-pill-badge">
+      <span class="google-dots">
+        <span class="dot blue"></span>
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+      </span>
+      <span>Company Intelligence Hub</span>
+    </div>
+    <h1 class="hero-title">Tech Hiring Bars & <span class="gradient-text">Interview Playbooks</span></h1>
+    <p class="hero-subtitle">Detailed breakdown of hiring standards, typical CTC, DSA bar, and round-by-round interview process for top tech firms.</p>
+  </section>
+
+  <!-- Companies Directory Container -->
+  <div class="companies-page-container">
+    <div class="category-tabs">
+      <button class="cat-tab active" onclick="filterCompanies('all', this)">All Companies (9)</button>
+      <button class="cat-tab" onclick="filterCompanies('product', this)">Tier-1 Product (6)</button>
+      <button class="cat-tab" onclick="filterCompanies('service', this)">Service & Digital (3)</button>
+    </div>
+
+    <div class="companies-detailed-grid" id="companiesGrid">
+      <!-- 1. Google -->
+      <div class="company-detail-card" data-cat="product">
+        <div>
+          <div class="card-top-info">
+            <div class="company-logo-avatar avatar-google">G</div>
+            <div class="company-card-header-text">
+              <h3>Google</h3>
+              <span class="company-badge-pill">Tier 1 Product</span>
+            </div>
+          </div>
+
+          <div class="company-bar-stats">
+            <div>
+              <div class="bar-stat-label">Target DSA Bar</div>
+              <div class="bar-stat-value">400+ Problems</div>
+            </div>
+            <div>
+              <div class="bar-stat-label">Estimated CTC</div>
+              <div class="bar-stat-value" style="color:var(--google-green);">₹25 - 45 LPA</div>
+            </div>
+          </div>
+
+          <p class="desc">High focus on Dynamic Programming, Graphs, Trees, Heaps, and clean time/space complexity proof.</p>
+
+          <div class="rounds-section-title"><span>📋</span> Interview Process</div>
+          <ul class="rounds-list">
+            <li><span class="round-step-num">1</span> Online Coding Assessment (2 Hard DSA Questions)</li>
+            <li><span class="round-step-num">2</span> Technical Round 1: Algorithms & Data Structures</li>
+            <li><span class="round-step-num">3</span> Technical Round 2: Complex Optimization & Trees/Graphs</li>
+            <li><span class="round-step-num">4</span> Technical Round 3: System Design / Architecture</li>
+            <li><span class="round-step-num">5</span> Googliness & Behavioral Principles Round</li>
+          </ul>
+        </div>
+        <a href="index.html?company=Google#evaluatorSection" class="btn-card-eval">
+          Evaluate My Profile for Google →
+        </a>
+      </div>
+
+      <!-- 2. Microsoft -->
+      <div class="company-detail-card" data-cat="product">
+        <div>
+          <div class="card-top-info">
+            <div class="company-logo-avatar avatar-microsoft">M</div>
+            <div class="company-card-header-text">
+              <h3>Microsoft</h3>
+              <span class="company-badge-pill">Tier 1 Product</span>
+            </div>
+          </div>
+
+          <div class="company-bar-stats">
+            <div>
+              <div class="bar-stat-label">Target DSA Bar</div>
+              <div class="bar-stat-value">350+ Problems</div>
+            </div>
+            <div>
+              <div class="bar-stat-label">Estimated CTC</div>
+              <div class="bar-stat-value" style="color:var(--google-green);">₹22 - 42 LPA</div>
+            </div>
+          </div>
+
+          <p class="desc">Balanced blend of DSA, Object-Oriented Low Level Design (LLD), and cloud scalability.</p>
+
+          <div class="rounds-section-title"><span>📋</span> Interview Process</div>
+          <ul class="rounds-list">
+            <li><span class="round-step-num">1</span> Codility Online Assessment (3 Coding Tasks)</li>
+            <li><span class="round-step-num">2</span> Technical Round 1: DSA Problem Solving</li>
+            <li><span class="round-step-num">3</span> Technical Round 2: Object-Oriented Design & LLD</li>
+            <li><span class="round-step-num">4</span> As Appropriate (AA) Round: High Level Design + Fit</li>
+          </ul>
+        </div>
+        <a href="index.html?company=Microsoft#evaluatorSection" class="btn-card-eval">
+          Evaluate My Profile for Microsoft →
+        </a>
+      </div>
+
+      <!-- 3. Amazon -->
+      <div class="company-detail-card" data-cat="product">
+        <div>
+          <div class="card-top-info">
+            <div class="company-logo-avatar avatar-amazon">A</div>
+            <div class="company-card-header-text">
+              <h3>Amazon</h3>
+              <span class="company-badge-pill">Tier 1 Product</span>
+            </div>
+          </div>
+
+          <div class="company-bar-stats">
+            <div>
+              <div class="bar-stat-label">Target DSA Bar</div>
+              <div class="bar-stat-value">350+ Problems</div>
+            </div>
+            <div>
+              <div class="bar-stat-label">Estimated CTC</div>
+              <div class="bar-stat-value" style="color:var(--google-green);">₹24 - 44 LPA</div>
+            </div>
+          </div>
+
+          <p class="desc">Rigorous technical rounds paired with high adherence to Amazon's 16 Leadership Principles.</p>
+
+          <div class="rounds-section-title"><span>📋</span> Interview Process</div>
+          <ul class="rounds-list">
+            <li><span class="round-step-num">1</span> Online Assessment (Debugging + 2 Coding + Work Sim)</li>
+            <li><span class="round-step-num">2</span> Technical Round 1: HashMaps, Trees, Two Pointers</li>
+            <li><span class="round-step-num">3</span> Technical Round 2: DSA & Object Oriented Patterns</li>
+            <li><span class="round-step-num">4</span> Bar Raiser Round: Leadership Principles & System Design</li>
+          </ul>
+        </div>
+        <a href="index.html?company=Amazon#evaluatorSection" class="btn-card-eval">
+          Evaluate My Profile for Amazon →
+        </a>
+      </div>
+
+      <!-- 4. Meta -->
+      <div class="company-detail-card" data-cat="product">
+        <div>
+          <div class="card-top-info">
+            <div class="company-logo-avatar avatar-meta">M</div>
+            <div class="company-card-header-text">
+              <h3>Meta</h3>
+              <span class="company-badge-pill">Tier 1 Product</span>
+            </div>
+          </div>
+
+          <div class="company-bar-stats">
+            <div>
+              <div class="bar-stat-label">Target DSA Bar</div>
+              <div class="bar-stat-value">400+ Problems</div>
+            </div>
+            <div>
+              <div class="bar-stat-label">Estimated CTC</div>
+              <div class="bar-stat-value" style="color:var(--google-green);">₹28 - 50 LPA</div>
+            </div>
+          </div>
+
+          <p class="desc">Speed & accuracy focus: Expected to solve 2 LeetCode Medium/Hard in 45 minutes flawlessly.</p>
+
+          <div class="rounds-section-title"><span>📋</span> Interview Process</div>
+          <ul class="rounds-list">
+            <li><span class="round-step-num">1</span> Technical Screening (2 Coding Tasks in 45 mins)</li>
+            <li><span class="round-step-num">2</span> Coding Round 1: Graphs, Trees & Fast Implementation</li>
+            <li><span class="round-step-num">3</span> Coding Round 2: Data Structures & Dynamic Programming</li>
+            <li><span class="round-step-num">4</span> Product Architecture & Distributed System Design</li>
+          </ul>
+        </div>
+        <a href="index.html?company=Meta#evaluatorSection" class="btn-card-eval">
+          Evaluate My Profile for Meta →
+        </a>
+      </div>
+
+      <!-- 5. Apple -->
+      <div class="company-detail-card" data-cat="product">
+        <div>
+          <div class="card-top-info">
+            <div class="company-logo-avatar avatar-apple">🍎</div>
+            <div class="company-card-header-text">
+              <h3>Apple</h3>
+              <span class="company-badge-pill">Tier 1 Product</span>
+            </div>
+          </div>
+
+          <div class="company-bar-stats">
+            <div>
+              <div class="bar-stat-label">Target DSA Bar</div>
+              <div class="bar-stat-value">320+ Problems</div>
+            </div>
+            <div>
+              <div class="bar-stat-label">Estimated CTC</div>
+              <div class="bar-stat-value" style="color:var(--google-green);">₹22 - 40 LPA</div>
+            </div>
+          </div>
+
+          <p class="desc">Deep emphasis on memory management, OS concurrency, and domain architecture.</p>
+
+          <div class="rounds-section-title"><span>📋</span> Interview Process</div>
+          <ul class="rounds-list">
+            <li><span class="round-step-num">1</span> Phone Technical Screening (Coding & CS fundamentals)</li>
+            <li><span class="round-step-num">2</span> Technical Deep-Dive: OS, Memory, Multi-threading</li>
+            <li><span class="round-step-num">3</span> Onsite DSA & Problem Solving Round</li>
+            <li><span class="round-step-num">4</span> Architectural Discussion & Team Fit</li>
+          </ul>
+        </div>
+        <a href="index.html?company=Apple#evaluatorSection" class="btn-card-eval">
+          Evaluate My Profile for Apple →
+        </a>
+      </div>
+
+      <!-- 6. Uber -->
+      <div class="company-detail-card" data-cat="product">
+        <div>
+          <div class="card-top-info">
+            <div class="company-logo-avatar avatar-uber">U</div>
+            <div class="company-card-header-text">
+              <h3>Uber</h3>
+              <span class="company-badge-pill">High Scale Product</span>
+            </div>
+          </div>
+
+          <div class="company-bar-stats">
+            <div>
+              <div class="bar-stat-label">Target DSA Bar</div>
+              <div class="bar-stat-value">380+ Problems</div>
+            </div>
+            <div>
+              <div class="bar-stat-label">Estimated CTC</div>
+              <div class="bar-stat-value" style="color:var(--google-green);">₹26 - 48 LPA</div>
+            </div>
+          </div>
+
+          <p class="desc">Ultra-high scale distributed systems, real-time message brokers, and complex graph algorithms.</p>
+
+          <div class="rounds-section-title"><span>📋</span> Interview Process</div>
+          <ul class="rounds-list">
+            <li><span class="round-step-num">1</span> Online Assessment (Advanced Coding Assessment)</li>
+            <li><span class="round-step-num">2</span> Live Coding Round 1: Algorithms & Data Structures</li>
+            <li><span class="round-step-num">3</span> Live Coding Round 2: Optimization & Graphs</li>
+            <li><span class="round-step-num">4</span> System Design: Real-time Geo-Distributed Services</li>
+          </ul>
+        </div>
+        <a href="index.html?company=Uber#evaluatorSection" class="btn-card-eval">
+          Evaluate My Profile for Uber →
+        </a>
+      </div>
+
+      <!-- 7. Infosys -->
+      <div class="company-detail-card" data-cat="service">
+        <div>
+          <div class="card-top-info">
+            <div class="company-logo-avatar avatar-infosys">I</div>
+            <div class="company-card-header-text">
+              <h3>Infosys</h3>
+              <span class="company-badge-pill">Specialist / DSE</span>
+            </div>
+          </div>
+
+          <div class="company-bar-stats">
+            <div>
+              <div class="bar-stat-label">Target DSA Bar</div>
+              <div class="bar-stat-value">100+ Problems</div>
+            </div>
+            <div>
+              <div class="bar-stat-label">Estimated CTC</div>
+              <div class="bar-stat-value" style="color:var(--google-green);">₹6.5 - 9.5 LPA</div>
+            </div>
+          </div>
+
+          <p class="desc">Core CS (OOP, DBMS, SQL), HackWithInfy coding rounds, and clean web fundamentals.</p>
+
+          <div class="rounds-section-title"><span>📋</span> Interview Process</div>
+          <ul class="rounds-list">
+            <li><span class="round-step-num">1</span> HackWithInfy / InfyTQ / Qualifier Exam</li>
+            <li><span class="round-step-num">2</span> Technical Interview: OOP, SQL Queries, Project Walkthrough</li>
+            <li><span class="round-step-num">3</span> HR & Communication Round</li>
+          </ul>
+        </div>
+        <a href="index.html?company=Infosys#evaluatorSection" class="btn-card-eval">
+          Evaluate My Profile for Infosys →
+        </a>
+      </div>
+
+      <!-- 8. TCS -->
+      <div class="company-detail-card" data-cat="service">
+        <div>
+          <div class="card-top-info">
+            <div class="company-logo-avatar avatar-tcs">T</div>
+            <div class="company-card-header-text">
+              <h3>TCS</h3>
+              <span class="company-badge-pill">Prime / Digital</span>
+            </div>
+          </div>
+
+          <div class="company-bar-stats">
+            <div>
+              <div class="bar-stat-label">Target DSA Bar</div>
+              <div class="bar-stat-value">90+ Problems</div>
+            </div>
+            <div>
+              <div class="bar-stat-label">Estimated CTC</div>
+              <div class="bar-stat-value" style="color:var(--google-green);">₹7 - 9 LPA</div>
+            </div>
+          </div>
+
+          <p class="desc">TCS NQT cognitive aptitude + advanced coding, Java/C++ syntax, and database relations.</p>
+
+          <div class="rounds-section-title"><span>📋</span> Interview Process</div>
+          <ul class="rounds-list">
+            <li><span class="round-step-num">1</span> TCS NQT (Cognitive Aptitude + Advanced Coding Section)</li>
+            <li><span class="round-step-num">2</span> Technical Interview: Core Programming, OOP, DBMS Joins</li>
+            <li><span class="round-step-num">3</span> Managerial & HR Discussion</li>
+          </ul>
+        </div>
+        <a href="index.html?company=TCS#evaluatorSection" class="btn-card-eval">
+          Evaluate My Profile for TCS →
+        </a>
+      </div>
+
+      <!-- 9. Wipro -->
+      <div class="company-detail-card" data-cat="service">
+        <div>
+          <div class="card-top-info">
+            <div class="company-logo-avatar avatar-wipro">W</div>
+            <div class="company-card-header-text">
+              <h3>Wipro</h3>
+              <span class="company-badge-pill">Turbo / Elite</span>
+            </div>
+          </div>
+
+          <div class="company-bar-stats">
+            <div>
+              <div class="bar-stat-label">Target DSA Bar</div>
+              <div class="bar-stat-value">80+ Problems</div>
+            </div>
+            <div>
+              <div class="bar-stat-label">Estimated CTC</div>
+              <div class="bar-stat-value" style="color:var(--google-green);">₹6.5 - 8.5 LPA</div>
+            </div>
+          </div>
+
+          <p class="desc">Wipro NLTH National Assessment, foundational data structures, and OOP problem solving.</p>
+
+          <div class="rounds-section-title"><span>📋</span> Interview Process</div>
+          <ul class="rounds-list">
+            <li><span class="round-step-num">1</span> Wipro NLTH (Aptitude, Written English, Coding Round)</li>
+            <li><span class="round-step-num">2</span> Technical Interview: OOP, Basic DS & Algorithms, SQL</li>
+            <li><span class="round-step-num">3</span> HR Round & Culture Alignment</li>
+          </ul>
+        </div>
+        <a href="index.html?company=Wipro#evaluatorSection" class="btn-card-eval">
+          Evaluate My Profile for Wipro →
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="google-footer">
+    <div class="footer-bottom" style="border:none; padding:0;">
+      <span>© 2026 Career AI. Crafted with Google Material Design principles.</span>
+      <a href="index.html" style="color:var(--google-blue); text-decoration:none; font-weight:600;">Back to Evaluator ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    function filterCompanies(cat, btn) {
+      document.querySelectorAll('.cat-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('.company-detail-card');
+      cards.forEach(card => {
+        if (cat === 'all' || card.dataset.cat === cat) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

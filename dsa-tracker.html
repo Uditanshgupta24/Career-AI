@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive DSA Mastery Tracker | Career AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-logo-symbol">⚡</div>
+        <span>Career AI</span>
+        <span class="brand-ai-chip">INTELLIGENCE</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Eligibility Evaluator</a></li>
+        <li><a href="companies.html">Company Directory</a></li>
+        <li><a href="dsa-tracker.html" class="active">DSA Tracker</a></li>
+        <li><a href="interview-guide.html">Interview Guide</a></li>
+        <li><a href="index.html#evaluatorSection" class="nav-cta">Check Readiness</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="hero" style="padding-bottom: 20px;">
+    <div class="hero-pill-badge">
+      <span class="google-dots">
+        <span class="dot blue"></span>
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+      </span>
+      <span>Interview DSA Roadmap</span>
+    </div>
+    <h1 class="hero-title">DSA Mastery <span class="gradient-text">Interactive Tracker</span></h1>
+    <p class="hero-subtitle">Check off high-frequency interview patterns as you solve them. Progress is automatically saved in your browser.</p>
+  </section>
+
+  <!-- Tracker Container -->
+  <div class="tracker-container">
+    <!-- Progress Banner -->
+    <div class="tracker-progress-banner">
+      <div>
+        <h3>Overall Practice Progress</h3>
+        <p id="progressSummary">0 of 20 core interview patterns mastered</p>
+      </div>
+      <div class="progress-banner-right">
+        <div class="progress-stat-pill">
+          <div class="metric-num" id="progressPercent">0%</div>
+          <span style="font-size:12px; color:var(--text-secondary); font-weight:600;">Completion</span>
+        </div>
+        <button class="action-btn-secondary" onclick="resetDsaTracker()" style="padding: 8px 16px;">
+          ↺ Reset
+        </button>
+      </div>
+    </div>
+
+    <!-- 1. Arrays & Hashing -->
+    <div class="topic-section-card accent-blue">
+      <div class="topic-header">
+        <h4>1. Arrays, Hashing & Two Pointers</h4>
+        <span class="difficulty-badge easy">Foundation Bar</span>
+      </div>
+      <ul class="interactive-checklist">
+        <li><input type="checkbox" class="step-checkbox dsa-check" id="dsa1" onchange="updateDsaProgress()"> <label for="dsa1">Two Sum & 3Sum <span class="pattern-tag">Hash Map & Two Pointers</span></label></li>
+        <li><input type="checkbox" class="step-checkbox dsa-check" id="dsa2" onchange="updateDsaProgress()"> <label for="dsa2">Group Anagrams & Valid Anagram <span class="pattern-tag">Frequency Map</span></label></li>
+        <li><input type="checkbox" class="step-checkbox dsa-check" id="dsa3" onchange="updateDsaProgress()"> <label for="dsa3">Maximum Subarray - Kadane's Algorithm <span class="pattern-tag">Dynamic Kadane</span></label></li>
+        <li><input type="checkbox" class="step-checkbox dsa-check" id="dsa4" onchange="updateDsaProgress()"> <label for="dsa4">Trapping Rain Water <span class="pattern-tag">Two Pointer Elevation</span></label></li>
+      </ul>
+    </div>
+
+    <!-- 2. Sliding Window & Binary Search -->
+    <div class="topic-section-card accent-green">
+      <div class="topic-header">
+        <h4>2. Sliding Window & Binary Search</h4>
+        <span class="difficulty-badge medium">Medium Bar</span>
+      </div>
+      <ul class="interactive-checklist">
+        <li><input type="checkbox" class="step-checkbox dsa-check" id="dsa5" onchange="updateDsaProgress()"> <label for="dsa5">Longest Substring Without Repeating Characters <span class="pattern-tag">Sliding Window</span></label></li>
+        <li><input type="checkbox" class="step-checkbox dsa-check" id="dsa6" onchange="updateDsaProgress()"> <label for="dsa6">Minimum Window Substring <span class="pattern-tag">Hard Window</span></label></li>
+        <li><input type="checkbox" class="step-checkbox dsa-check" id="dsa7" onchange="updateDsaProgress()"> <label for="dsa7">Search in Rotated Sorted Array <span class="pattern-tag">Binary Search</span></label></li>
+        <li><input type="checkbox" class="step-checkbox dsa-check" id="dsa8" onchange="updateDsaProgress()"> <label for="dsa8">Find Minimum in Rotated Sorted Array <span class="pattern-tag">Binary Search</span></label></li>
+      </ul>
+    </div>
+
+    <!-- 3. Trees & Binary Search Trees -->
+    <div class="topic-section-card accent-yellow">
+      <div class="topic-header">
+        <h4>3. Trees & Binary Search Trees</h4>
+        <span class="difficulty-badge medium">Google / MSFT Bar</span>
+      </div>
+      <ul class="interactive-checklist">
+        <li><input type="checkbox" class="step-checkbox dsa-check" id="dsa9" onchange="updateDsaProgress()"> <label for="dsa9">Lowest Common Ancestor in Binary Tree & BST <span class="pattern-tag">Tree Recursion</span></label></li>
+        <li><input type="checkbox" class="step-checkbox dsa-check" id="dsa10" onchange="updateDsaProgress()"> <label for="dsa10">Binary Tree Level Order Traversal <span class="pattern-tag">Queue BFS</span></label></li>
+        <li><input type="checkbox" class="step-checkbox dsa-check" id="dsa11" onchange="updateDsaProgress()"> <label for="dsa11">Validate Binary Search Tree <span class="pattern-tag">Inorder Traversal</span></label></li>
+        <li><input type="checkbox" class="step-checkbox dsa-check" id="dsa12" onchange="updateDsaProgress()"> <label for="dsa12">Serialize and Deserialize Binary Tree <span class="pattern-tag">Hard Serialization</span></label></li>
+      </ul>
+    </div>
+
+    <!-- 4. Graphs & Disjoint Set -->
+    <div class="topic-section-card accent-red">
+      <div class="topic-header">
+        <h4>4. Graphs, BFS, DFS & Topo Sort</h4>
+        <span class="difficulty-badge hard">Tier 1 High Priority</span>
+      </div>
+      <ul class="interactive-checklist">
+        <li><input type="checkbox" class="step-checkbox dsa-check" id="dsa13" onchange="updateDsaProgress()"> <label for="dsa13">Number of Islands <span class="pattern-tag">Grid DFS / BFS</span></label></li>
+        <li><input type="checkbox" class="step-checkbox dsa-check" id="dsa14" onchange="updateDsaProgress()"> <label for="dsa14">Course Schedule I & II <span class="pattern-tag">Kahn's Topo Sort</span></label></li>
+        <li><input type="checkbox" class="step-checkbox dsa-check" id="dsa15" onchange="updateDsaProgress()"> <label for="dsa15">Network Delay Time / Dijkstra's Shortest Path <span class="pattern-tag">Min-Heap Dijkstra</span></label></li>
+        <li><input type="checkbox" class="step-checkbox dsa-check" id="dsa16" onchange="updateDsaProgress()"> <label for="dsa16">Word Ladder <span class="pattern-tag">Bidirectional BFS</span></label></li>
+      </ul>
+    </div>
+
+    <!-- 5. Dynamic Programming -->
+    <div class="topic-section-card accent-purple">
+      <div class="topic-header">
+        <h4>5. Dynamic Programming (1D & 2D)</h4>
+        <span class="difficulty-badge hard">Tier 1 Hard Bar</span>
+      </div>
+      <ul class="interactive-checklist">
+        <li><input type="checkbox" class="step-checkbox dsa-check" id="dsa17" onchange="updateDsaProgress()"> <label for="dsa17">Coin Change & 0/1 Knapsack Pattern <span class="pattern-tag">Subset DP</span></label></li>
+        <li><input type="checkbox" class="step-checkbox dsa-check" id="dsa18" onchange="updateDsaProgress()"> <label for="dsa18">Longest Increasing Subsequence <span class="pattern-tag">O(N log N) Binary Search DP</span></label></li>
+        <li><input type="checkbox" class="step-checkbox dsa-check" id="dsa19" onchange="updateDsaProgress()"> <label for="dsa19">Longest Common Subsequence & Edit Distance <span class="pattern-tag">2D Grid DP</span></label></li>
+        <li><input type="checkbox" class="step-checkbox dsa-check" id="dsa20" onchange="updateDsaProgress()"> <label for="dsa20">Word Break & Partition Equal Subset Sum <span class="pattern-tag">Memoization</span></label></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="google-footer">
+    <div class="footer-bottom" style="border:none; padding:0;">
+      <span>© 2026 Career AI. Crafted with Google Material Design principles.</span>
+      <a href="index.html" style="color:var(--google-blue); text-decoration:none; font-weight:600;">Back to Evaluator ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    function updateDsaProgress() {
+      const checkboxes = document.querySelectorAll('.dsa-check');
+      const total = checkboxes.length;
+      let checkedCount = 0;
+      const states = {};
+
+      checkboxes.forEach(cb => {
+        const li = cb.closest('li');
+        if (cb.checked) {
+          checkedCount++;
+          if (li) li.classList.add('completed');
+        } else {
+          if (li) li.classList.remove('completed');
+        }
+        states[cb.id] = cb.checked;
+      });
+
+      const pct = Math.round((checkedCount / total) * 100);
+      document.getElementById('progressPercent').innerText = pct + '%';
+      document.getElementById('progressSummary').innerText = `${checkedCount} of ${total} core interview patterns mastered`;
+
+      localStorage.setItem('career_ai_dsa_tracker', JSON.stringify(states));
+    }
+
+    function loadDsaProgress() {
+      const saved = localStorage.getItem('career_ai_dsa_tracker');
+      if (saved) {
+        try {
+          const states = JSON.parse(saved);
+          for (const id in states) {
+            const el = document.getElementById(id);
+            if (el) el.checked = states[id];
+          }
+        } catch(e){}
+      }
+      updateDsaProgress();
+    }
+
+    function resetDsaTracker() {
+      if (confirm("Reset your DSA tracker progress?")) {
+        localStorage.removeItem('career_ai_dsa_tracker');
+        document.querySelectorAll('.dsa-check').forEach(cb => {
+          cb.checked = false;
+          const li = cb.closest('li');
+          if (li) li.classList.remove('completed');
+        });
+        updateDsaProgress();
+      }
+    }
+
+    window.onload = loadDsaProgress;
+  </script>
+</body>
+</html>

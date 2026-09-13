@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interview Master Guide | Career AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-logo-symbol">⚡</div>
+        <span>Career AI</span>
+        <span class="brand-ai-chip">INTELLIGENCE</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Eligibility Evaluator</a></li>
+        <li><a href="companies.html">Company Directory</a></li>
+        <li><a href="dsa-tracker.html">DSA Tracker</a></li>
+        <li><a href="interview-guide.html" class="active">Interview Guide</a></li>
+        <li><a href="index.html#evaluatorSection" class="nav-cta">Check Readiness</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="hero" style="padding-bottom: 20px;">
+    <div class="hero-pill-badge">
+      <span class="google-dots">
+        <span class="dot blue"></span>
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+      </span>
+      <span>Interview Playbook</span>
+    </div>
+    <h1 class="hero-title">Interview <span class="gradient-text">Mastery Guide</span></h1>
+    <p class="hero-subtitle">Proven frameworks for Google STAR behavioral questions, ATS resume optimization, and high-level System Design interviews.</p>
+  </section>
+
+  <!-- Content Container -->
+  <div class="guide-container">
+    <!-- 1. Google STAR Framework -->
+    <div class="guide-card" id="star">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+        <h3>1. The STAR Method (Google & Amazon Behavioral Standard)</h3>
+        <span class="difficulty-badge medium">Essential Framework</span>
+      </div>
+      <p class="guide-subtitle">
+        Structure every behavioral response using this 4-step framework to ensure maximum impact and clarity:
+      </p>
+
+      <div class="star-grid">
+        <div class="star-box situation">
+          <div class="star-letter">S - Situation</div>
+          <p><strong>Context & Setup (15%):</strong> Set the scene. What project, business challenge, or technical bottleneck did you encounter?</p>
+        </div>
+        <div class="star-box task">
+          <div class="star-letter">T - Task</div>
+          <p><strong>Goal & Ownership (15%):</strong> What was your exact personal responsibility? What was the risk or deliverable expected?</p>
+        </div>
+        <div class="star-box action">
+          <div class="star-letter">A - Action</div>
+          <p><strong>Execution & Decisions (50%):</strong> The meat of your story. Detail the technical architecture, algorithms, trade-offs, and teamwork you led.</p>
+        </div>
+        <div class="star-box result">
+          <div class="star-letter">R - Result</div>
+          <p><strong>Measurable Impact (20%):</strong> Quantify your achievements! e.g., 'Reduced query latency by 45%', 'Handled 50k daily active users'.</p>
+        </div>
+      </div>
+
+      <div class="example-box">
+        <strong>💡 Real Example (Answering 'Tell me about a time you optimized a slow system'):</strong><br>
+        <em>"Our checkout API experienced 2.4s latency during peak hours (Situation). I was tasked with bringing response times under 400ms (Task). I profiled the SQL queries, implemented Redis multi-level caching, and replaced sequential calls with asynchronous worker queues (Action). This slashed peak latency by 78% and eliminated customer timeout drops entirely (Result)."</em>
+      </div>
+    </div>
+
+    <!-- 2. ATS Resume Checklist & Comparison -->
+    <div class="guide-card" id="ats">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+        <h3>2. ATS Resume Optimization: Weak vs Strong Bullets</h3>
+        <span class="difficulty-badge easy">Resume Checklist</span>
+      </div>
+      <p class="guide-subtitle">
+        Modern ATS screeners rank resumes on action verbs, keyword density, and quantifiable business outcomes.
+      </p>
+
+      <div class="comparison-table-grid">
+        <div class="compare-card weak">
+          <div class="compare-title weak">
+            <span>✗</span> Weak / Generic Bullet Points
+          </div>
+          <ul>
+            <li>Built a REST API using Node.js and Express.</li>
+            <li>Worked on the database and wrote SQL queries.</li>
+            <li>Helped the frontend team with React components.</li>
+            <li>Did bug fixing and improved performance.</li>
+          </ul>
+        </div>
+
+        <div class="compare-card strong">
+          <div class="compare-title strong">
+            <span>✓</span> High-Impact / ATS-Optimized Bullets
+          </div>
+          <ul>
+            <li>Architected REST APIs in Node.js & Redis caching, serving 12,000 req/min with sub-100ms latency.</li>
+            <li>Optimized PostgreSQL indexing & normalized schemas, reducing query execution time by 62%.</li>
+            <li>Engineered reusable React + TypeScript UI component library adopted across 4 micro-frontends.</li>
+            <li>Identified and eliminated memory leaks in production, improving uptime from 98.2% to 99.95%.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. System Design Cheat Sheet -->
+    <div class="guide-card" id="system-design">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+        <h3>3. System Design Building Blocks Cheat Sheet</h3>
+        <span class="difficulty-badge hard">Architecture Mastery</span>
+      </div>
+      <p class="guide-subtitle">
+        Master these core architectural components before stepping into Google, Meta, or Amazon design rounds:
+      </p>
+
+      <div class="sys-design-grid">
+        <div class="sys-block">
+          <h5>⚖️ Scalability & Load Balancing</h5>
+          <ul>
+            <li><strong>Round Robin & Least Connections:</strong> Simple server balancing.</li>
+            <li><strong>Consistent Hashing:</strong> Minimizes key re-mapping when nodes scale up/down.</li>
+            <li><strong>Reverse Proxy (Nginx):</strong> SSL termination, compression & rate limiting.</li>
+          </ul>
+        </div>
+
+        <div class="sys-block">
+          <h5>⚡ Caching Strategies</h5>
+          <ul>
+            <li><strong>Cache-Aside:</strong> Application queries cache first; on miss, reads DB and writes to cache.</li>
+            <li><strong>Write-Through vs Write-Back:</strong> Synchronous reliability vs fast batched writes.</li>
+            <li><strong>Eviction Policies:</strong> LRU (Least Recently Used), LFU, and TTL expiration.</li>
+          </ul>
+        </div>
+
+        <div class="sys-block">
+          <h5>🗄️ Database Architecture</h5>
+          <ul>
+            <li><strong>SQL vs NoSQL:</strong> Strict ACID consistency vs flexible schema & horizontal partitioning.</li>
+            <li><strong>Sharding:</strong> Horizontal data partitioning across multiple database nodes.</li>
+            <li><strong>Read Replicas:</strong> Offload heavy read traffic from the primary write database.</li>
+          </ul>
+        </div>
+
+        <div class="sys-block">
+          <h5>📬 Async Decoupling & Queues</h5>
+          <ul>
+            <li><strong>Message Brokers (Kafka / RabbitMQ):</strong> Decouples fast producers from slow consumers.</li>
+            <li><strong>Event-Driven Architecture:</strong> Pub/Sub patterns for resilient microservices.</li>
+            <li><strong>Idempotency:</strong> Ensures duplicated messages do not cause multiple side-effects.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="google-footer">
+    <div class="footer-bottom" style="border:none; padding:0;">
+      <span>© 2026 Career AI. Crafted with Google Material Design principles.</span>
+      <a href="index.html" style="color:var(--google-blue); text-decoration:none; font-weight:600;">Back to Evaluator ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
