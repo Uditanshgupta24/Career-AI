@@ -1685,3 +1685,66 @@ input:focus, select:focus, textarea:focus {
   height: 100%;
   object-fit: contain;
 }
+
+/* ==========================================================================
+   OFFICIAL COMPANY LOGO CONTAINER & SIZING FIX
+   ========================================================================== */
+.company-logo-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  margin: 0 auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1.5px solid var(--border);
+  padding: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  transition: all 0.2s ease;
+}
+
+.picker-card:hover .company-logo-avatar {
+  border-color: var(--google-blue);
+  box-shadow: 0 2px 8px rgba(26,115,232,0.18);
+  transform: scale(1.05);
+}
+
+.company-logo-avatar img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.card-top-info .company-logo-avatar {
+  margin: 0;
+  width: 56px;
+  height: 56px;
+  padding: 11px;
+  flex-shrink: 0;
+}
+
+.result-logo-badge {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  background: white;
+  border: 1.5px solid var(--border);
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.result-logo-badge img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
