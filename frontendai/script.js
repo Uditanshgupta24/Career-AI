@@ -359,9 +359,16 @@ function renderResults(data) {
     <!-- Top Card: Company Verdict, Salary Insights & Circular Score Gauge -->
     <div class="result-header-card">
       <div>
-        <span class="company-badge-pill">${data.tier}</span>
-        <span class="salary-tag-chip">💰 Est. CTC: ${data.salary_range}</span>
-        <h2 class="result-company-name">${data.company}</h2>
+        <div style="display:flex; align-items:center; gap:14px; margin-bottom:8px;">
+          <div class="result-logo-badge">
+            <img src="assets/logos/${data.company.toLowerCase()}.svg" onerror="this.style.display='none'" alt="${data.company}">
+          </div>
+          <div>
+            <span class="company-badge-pill">${data.tier}</span>
+            <span class="salary-tag-chip">💰 Est. CTC: ${data.salary_range}</span>
+            <h2 class="result-company-name">${data.company}</h2>
+          </div>
+        </div>
         <div class="result-role-name">Targeting: <strong>${data.role}</strong> (${data.experience_level})</div>
         <div class="verdict-callout">
           <strong>Readiness Verdict:</strong> ${data.verdict}
